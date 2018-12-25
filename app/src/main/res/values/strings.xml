@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MedicalFridge</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fridges">Холодильники</string>
+    <string name="statistic">Статистика</string>
+    <string name="profile">Профіль</string>
+    <string name="login">вхід</string>
+    <string name="registration">регистрация</string>
+    <string name="password">Пароль</string>
+    <string name="e_mail">E-mail</string>
+    <string name="number_of_chamber">№ Камери: %s</string>
+    <string name="temperature_in_chamber">Температура: %s</string>
+    <string name="humidity_in_chamber">Влажность: %s</string>
+    <string name="state_of_chamber_is_ok">Состояние камеры: ОК</string>
+    <string name="state_of_chamber_is_fail">Состояние камеры: ПРОБЛЕМЫ</string>
+</resources>
