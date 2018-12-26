@@ -24,7 +24,7 @@ class ChambersFragment : Fragment(), ChamberAdapter.OnClickListener {
     private lateinit var navController: NavController
 
     override fun onClick(fridge: Fridge) {
-        navController.navigate(ChambersFragmentDirections.actionChambersFragmentToMedicationsFragment())
+        navController.navigate(R.id.action_chambersFragment_to_medicationsFragment, MedicationsFragment.newInstance(fridge.id))
     }
 
     override fun onCreateView(
@@ -45,9 +45,9 @@ class ChambersFragment : Fragment(), ChamberAdapter.OnClickListener {
     }
 
     private fun getChambers() {
-        val chambersRequest = App.Api.getFridgesByUserId(App.user.idUser)
+        val chambersRequest = App.Api.getFridgesByUserId(App.user.idUser.toInt())
         chambersRequest.enqueue(object : Callback<List<Fridge>> {
-            override fun onFailure(call: Call<List<Fridge>>, t: Throwable) { }
+            override fun onFailure(call: Call<List<Fridge>>, t: Throwable) {}
 
             override fun onResponse(call: Call<List<Fridge>>, response: Response<List<Fridge>>) {
                 if (response.isSuccessful) {
@@ -60,11 +60,9 @@ class ChambersFragment : Fragment(), ChamberAdapter.OnClickListener {
     }
 
     private fun initializeListOfChambers(data: List<Fridge>) {
-        if (isVisible) {
-            rvChambers?.layoutManager = LinearLayoutManager(context)
-            context?.let {
-                rvChambers.adapter = ChamberAdapter(it, data, this)
-            }
+        rvChambers?.layoutManager = LinearLayoutManager(context)
+        context?.let {
+            rvChambers?.adapter = ChamberAdapter(it, data, this)
         }
     }
 
@@ -81,7 +79,7 @@ class ChambersFragment : Fragment(), ChamberAdapter.OnClickListener {
     }
 
     private fun createChamber() {
-        val createChamberRequest = App.Api.createChamber(MainModel(IdUser =  App.user.idUser))
+        val createChamberRequest = App.Api.createChamber(MainModel(IdUser = App.user.idUser.toInt()))
         createChamberRequest.enqueue(object : Callback<List<Fridge>> {
             override fun onFailure(call: Call<List<Fridge>>, t: Throwable) {
 

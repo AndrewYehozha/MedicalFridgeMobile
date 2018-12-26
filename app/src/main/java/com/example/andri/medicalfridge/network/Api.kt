@@ -5,10 +5,7 @@ import com.example.andri.medicalfridge.model.MainModel
 import com.example.andri.medicalfridge.model.Medication
 import com.example.andri.medicalfridge.model.User
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.Path
+import retrofit2.http.*
 
 interface Api {
 
@@ -23,4 +20,10 @@ interface Api {
 
     @GET("api/Medicaments/{id}")
     fun getMedications(@Path("id") idUser: Int): Call<List<Medication>>
+
+    @DELETE("api/Medicaments/{id}")
+    fun deleteMedications(@Path("id") idMedication: Int): Call<List<Medication>>
+
+    @PUT("api/Users/{id}")
+    fun updateUser(@Path("id") idUser: Int, @Body user: User): Call<List<User>>
 }

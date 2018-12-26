@@ -15,4 +15,20 @@
     <string name="state_of_chamber_is_ok">Состояние камеры: ОК</string>
     <string name="state_of_chamber_is_fail">Состояние камеры: ПРОБЛЕМЫ</string>
     <string name="add_chamber">Добавить камеру</string>
+    <string name="name_of_medication">Название медикамента: %s</string>
+    <string name="amount">Количество: %s</string>
+    <string name="date_of_create">Дата изготовления: %s</string>
+    <string name="date_of_expiration">Пригоден до: %s</string>
+    <string name="price">Цена: %s</string>
+    <string name="status_ok">Состояние: ПРИГОДЕН</string>
+    <string name="status_fail">Состояние: НЕПРИГОДЕН</string>
+    <string name="min_temperature">Минимальная температура хранения: %s</string>
+    <string name="max_temperature">Максимальная температура хранения: %s</string>
+    <string name="delete">удалить</string>
+    <string name="done">готово</string>
+    <string name="name_organization">Name organization</string>
+    <string name="country">Country</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+    <string name="phone">Phone</string>
 </resources>
