@@ -37,19 +37,13 @@ class ChamberAdapter : RecyclerView.Adapter<ChamberAdapter.ViewHolder> {
         holder.itemView.setOnClickListener { listener.onClick(item) }
     }
 
-    class ViewHolder : RecyclerView.ViewHolder {
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
-        lateinit var tvNumberOfChamber: TextView
-        lateinit var tvTemperature: TextView
-        lateinit var tvHumidity: TextView
-        lateinit var tvStateOfChamber: TextView
+        var tvNumberOfChamber: TextView = view.findViewById(R.id.tvNumberOfChamber)
+        var tvTemperature: TextView = view.findViewById(R.id.tvTemperature)
+        var tvHumidity: TextView = view.findViewById(R.id.tvHumidity)
+        var tvStateOfChamber: TextView = view.findViewById(R.id.tvStateOfChamber)
 
-        constructor(view: View): super(view) {
-            tvNumberOfChamber = view.findViewById(R.id.tvNumberOfChamber)
-            tvTemperature = view.findViewById(R.id.tvTemperature)
-            tvHumidity = view.findViewById(R.id.tvHumidity)
-            tvStateOfChamber = view.findViewById(R.id.tvStateOfChamber)
-        }
     }
 
     interface OnClickListener {

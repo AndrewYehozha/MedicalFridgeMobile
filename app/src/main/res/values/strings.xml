@@ -14,4 +14,5 @@
     <string name="humidity_in_chamber">Влажность: %s</string>
     <string name="state_of_chamber_is_ok">Состояние камеры: ОК</string>
     <string name="state_of_chamber_is_fail">Состояние камеры: ПРОБЛЕМЫ</string>
+    <string name="add_chamber">Добавить камеру</string>
 </resources>
